@@ -24,12 +24,9 @@ li {
 
 a {
   text-decoration: none;
-  color: #fff;
   padding: 5px 10px;
-  border-radius: 5px;
 }
 
 a:hover {
-  background-color: #fff;
-  color: #87CEFA;
+  color: #686868;
 }

@@ -1,3 +1,38 @@
 <app-nav></app-nav>
-este es el home
+<!-- PRESUPUESTO -->
+<div class="container1">
+  <div class="button-wrapper" (click)="mostrarPresu()">
+    <button>Presupuesto</button>
+  </div>
+  <div class="centered-content" *ngIf="mostrarPresupuesto">
+    <input type="month" [(ngModel)]="presupuestoAnual" placeholder="Nombre del mes">
+    <button class="button-presupuesto" (click)="buscarPresupuesto()">Buscar</button>
+    <p>Resultados para el mes {{presupuestoAnual}}</p>
+  </div>
+</div>
+
+<!-- MIS GASTOS -->
+<div class="container2">
+  <div class="button-wrapper" (click)="mostrarGastosTotales()">
+    <button>Gastos</button>
+  </div>
+  <div class="centered-content" *ngIf="mostrarGastos">
+    <input type="month" [(ngModel)]="gastoAnual" placeholder="Nombre del mes">
+    <button class="button-presupuesto" (click)="buscarGastos()">Buscar</button>
+    <p>Resultados para el mes {{gastoAnual}}</p>
+  </div>
+</div>
+
+<!-- NUEVO PRESUPUESTO -->
+<div class="container1">
+</div>
+
+<!-- CERRAR SECION -->
+<div class="container2">
+  <div class="button-wrapper">
+    <button>
+    <a href="">CERRAR SECION</a>
+  </button>
+  </div>
+</div>
  <app-footer></app-footer>

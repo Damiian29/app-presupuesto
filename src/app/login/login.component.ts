@@ -14,8 +14,9 @@ export class LoginComponent {
   constructor(private router: Router) { }
 
   onSubmit() {
-    if (this.username == 'Dami' && this.password == '1234') {
-      this.router.navigate(['home']);
+    console.log('password:', this.password)
+     if (this.username == 'Damian' && this.password == '1234') {
+      this.router.navigate(['/ingresarPresupuesto']);
     } else {
       this.errorMessage = 'Invalid username or password';
     }

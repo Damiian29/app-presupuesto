@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './pag-principal/home/home.component';
+// Componentes
+import { IngresarPresupuestoComponent } from './components/ingresar-presupuesto/ingresar-presupuesto.component';
+import { GastosComponent } from './components/gastos/gastos.component';
 
 const routes: Routes = [
-  {path:'', component:LoginComponent},
-  {path:'home', component:HomeComponent}];
+  { path: '', redirectTo: '/ingresarPresupuesto', pathMatch: 'full'},
+  { path: 'ingresarPresupuesto', component: IngresarPresupuestoComponent},
+  { path: 'gastos', component: GastosComponent },
+  { path: '**', redirectTo: '/ingresarPresupuesto', pathMatch: 'full'}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
